@@ -56,12 +56,13 @@ echo 1) File Management Tools
 echo 2) Command Line Tools
 echo 3) Internet Tools
 echo 4) System Management
-echo The System Manual is Not Available Now, We're Sorry!
+echo 5) Read the System Manual
 set /p system-action="What do you want to do Today?"
 if %system-action% == 1 goto file-management
 if %system-action% == 2 goto command-line-tools
 if %system-action% == 3 goto internet-tools
 if %system-action% == 4 start notepad systembat.ini
+if %system-action% == 5 goto manual
 goto crash
 :crash
 cls
@@ -79,8 +80,10 @@ goto login
 :internet-tools
 cls
 title System Bat Browser
+echo Site to go
 set site="Site: "
-set /p incognito="Incognito? (Y/N)"
+echo Incognito? (Y/N)
+set /p incognito=""
 if %incognito% == Y start msedge %site% -inprivate
 if %incognito% == N start msedge %site%
 goto system-menu
@@ -167,3 +170,11 @@ set /p wtd-nme="What will be the Name of the File you want to Download once its 
 powershell Invoke-WebRequest %wtd% -OutFile %wtd-lct%\%wtd-nme%
 pause
 goto file-management
+
+
+
+:manual
+:: This Checks if Manual is Installed in SystemBat
+if not exist systembatmanual.txt == true powershell Invoke-WebRequest https://github.com/PressTpro/SystemBat/raw/main/systembatmanual.txt -OutFile systembatmanual.txt
+start systembatmanual.txt
+goto system-menu
