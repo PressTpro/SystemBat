@@ -8,6 +8,8 @@ echo SystemBat will be installed in %where-toinstall%
 pause
 echo Downloading SystemBat from GitHub
 powershell Invoke-WebRequest https://github.com/PressTpro/SystemBat/raw/main/systembat.bat -OutFile %where-toinstall%\systembat.bat
+echo Downloading Manual from GitHub
+powershell Invoke-WebRequest https://github.com/PressTpro/SystemBat/raw/main/systembatmanual.txt -OutFile %where-toinstall%\systembatmanual.txt
 echo Creating Save Data...
 echo ;; SystemBat Settings >>%where-toinstall%\systembat.ini
 echo ;; Here Are Stored all the SystemBat Settings used in the System such as Username and Password >>%where-toinstall%\systembat.ini
