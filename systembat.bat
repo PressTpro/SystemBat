@@ -22,7 +22,7 @@ set deleter=Deleter
 set command-line=Command
 set ssh-line=SSH
 set bash-line=Bash
-set version=0.2.1a
+set version=0.3.0a
 :: Load Savedata
 for /f "tokens=1,2 delims==" %%a in (systembat.ini) do (
 if %%a==systembat-username set systembat-username=%%b
