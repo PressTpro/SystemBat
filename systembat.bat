@@ -79,10 +79,8 @@ goto login
 :internet-tools
 cls
 title System Bat Browser
-echo Site to go
 set site="Site: "
-echo Incognito? (Y/N)
-set /p incognito=""
+set /p incognito="Incognito? (Y/N)"
 if %incognito% == Y start msedge %site% -inprivate
 if %incognito% == N start msedge %site%
 goto system-menu
