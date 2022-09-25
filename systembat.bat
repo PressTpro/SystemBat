@@ -11,7 +11,7 @@ title Starting Up...
 :: Load Errors
 if ERRORLEVEL == 1 goto crash
 :: Load System color
-color 1f
+
 :: Applications
 set downloader=Downloader
 set notepad=Notepad
@@ -24,8 +24,10 @@ set bash-line=Bash
 for /f "tokens=1,2 delims==" %%a in (systembat.ini) do (
 if %%a==systembat-username set systembat-username=%%b
 if %%a==systembat-password set systembat-password=%%b
+if %%a==systembat-color set systembat-color=%%b
 )
-:: This Loads SystemBat.ini
+:: Load Color
+color %systembat-color%
 :: Once Done Loading, It haves to Enter to the Login Page
 :: It Verifies you're using a correct Username And Password, if true, it allows you to continue, else it will crash and exit
 :login
