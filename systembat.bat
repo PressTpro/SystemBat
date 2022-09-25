@@ -113,7 +113,7 @@ echo 3) %ssh-line%
 echo 4) Return to System Menu
 set /p cmd-tools-option="Option: "
 if %cmd-tools-option% == 1 goto command-line
-if %cmd-tools-option% == 2 goto bash-client
+if %cmd-tools-option% == 2 goto bash-loader
 if %cmd-tools-option% == 3 goto ssh-client
 if %cmd-tools-option% == 4 goto system-menu
 goto crash
