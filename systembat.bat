@@ -6,6 +6,8 @@
 :: The Boot Stage Loads the System and Crashes when a Error Happens
 :boot
 @echo off
+:: Before Everything, Check if there exists a updt-fnlz.bat
+if exist updt-fnlz.bat == true del updt-fnlz.bat
 cls
 title Starting Up...
 :: Load Errors
@@ -20,6 +22,7 @@ set deleter=Deleter
 set command-line=Command
 set ssh-line=SSH
 set bash-line=Bash
+set version=0.2.1a
 :: Load Savedata
 for /f "tokens=1,2 delims==" %%a in (systembat.ini) do (
 if %%a==systembat-username set systembat-username=%%b
@@ -59,12 +62,14 @@ echo 2) Command Line Tools
 echo 3) Internet Tools
 echo 4) System Management
 echo 5) Read the System Manual
+echo 6) Check for Updates
 set /p system-action="What do you want to do Today?"
 if %system-action% == 1 goto file-management
 if %system-action% == 2 goto command-line-tools
 if %system-action% == 3 goto internet-tools
 if %system-action% == 4 start notepad systembat.ini
 if %system-action% == 5 goto manual
+if %system-action% == 6 goto update-check
 goto crash
 :crash
 cls
@@ -179,4 +184,35 @@ goto file-management
 :: This Checks if Manual is Installed in SystemBat
 if not exist systembatmanual.txt == true powershell Invoke-WebRequest https://github.com/PressTpro/SystemBat/raw/main/systembatmanual.txt -OutFile systembatmanual.txt
 start systembatmanual.txt
+goto system-menu
+
+:update-check
+cls
+title SystemBat Update Checker
+echo Checking for Updates
+powershell Invoke-WebRequest https://github.com/PressTpro/SystemBat/raw/main/current-version.txt -OutFile current-version.txt
+for /f "delims=" %%x in (current-version.txt) do set net-ver=%%x
+if %net-ver% == %version% goto update-check-no-new-updates
+if %net-ver% == * goto update-check-new-update
+:update-check-new-update
+echo Downloading Update...
+powershell Invoke-WebRequest https://github.com/PressTpro/SystemBat/raw/main/systembat.bat -OutFile systembat1.bat
+echo Done.
+echo Generating Update Finalizer
+echo @echo off >>updt-fnlz.bat
+echo echo Deleting Older Version >>updt-fnlz.bat
+echo DEL systembat.bat >>updt-fnlz.bat
+echo echo Doing Some Extras... >>updt-fnlz.bat
+echo RENAME systembat1.bat systembat.bat >>updt-fnlz.bat
+echo echo Done >>updt-fnlz.bat
+echo pause >>updt-fnlz.bat
+echo start systembat.bat >>updt-fnlz.bat
+echo exit >>updt-fnlz.bat
+echo Update Finalizer Genrated
+echo Bye! Hope See you soon
+start updt-fnlz.bat
+exit
+:update-check-no-new-updates
+echo Congratulations! You're in the Most Recent Version of SystemBat
+pause
 goto system-menu
