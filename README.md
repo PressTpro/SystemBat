@@ -1,5 +1,5 @@
 # SystemBat
-### Latest Update 0.2.1 ALPHA | What's New in this Update: Added Custom Colors | What's New in this Fix: Fixed Bash in Command Line Tools
+### Latest Update 0.3.0 ALPHA | What's New in this Update: Added Update Checker | What's New in this Fix: Fixed Bash in Command Line Tools
 SystemBat is a Small Operating System Built In Batch It Can Run Pre-Included Applications such as SystemBat Browser or SystemBat
 # Installation
 **DO NOT USE SYSTEMBAT IN WINE**
