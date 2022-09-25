@@ -1,4 +1,5 @@
 # SystemBat
+### Latest Update 0.2 ALPHA | What's New in this Update: Added Custom Colors
 SystemBat is a Small Operating System Built In Batch It Can Run Pre-Included Applications such as SystemBat Browser or SystemBat
 # Installation
 **DO NOT USE SYSTEMBAT IN WINE**
