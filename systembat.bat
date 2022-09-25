@@ -91,12 +91,14 @@ cls
 title SystemBat File Management Tools
 echo What would you like to do?
 echo 1) RENAME a File using RENAMER
-echo 2) DELETE a File using Deleter
-echo 3) Return to System Menu
+echo 2) DELETE a File using Delete
+echo 3) DOWNLOAD a File from the Web using Downloader
+echo 4) Return to System Menu
 set /p file-management-option="Option:"
 if %file-management-option% == 1 goto renamer
 if %file-management-option% == 2 goto deleter
-if %file-management-option% == 3 goto system-menu
+if %file-management-option% == 3 goto dwnldr
+if %file-management-option% == 4 goto system-menu
 goto crash
 :command-line-tools
 cls
@@ -157,3 +159,13 @@ echo Type systembat-leave to Return to Command Line Tools Category
 set /p bash-command="$"
 bash %bash-command%
 if %bash-command%==systembat-leave goto command-line-tools
+goto bash-loop
+:dwnldr
+cls
+title SystemBat Downloader
+set /p wtd="File to Download: "
+set /p wtd-lct="File Location: "
+set /p wtd-nme="What will be the Name of the File you want to Download once its in your PC? "
+powershell Invoke-WebRequest %wtd% -OutFile %wtd-lct%\%wtd-nme%
+pause
+goto file-management
