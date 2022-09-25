@@ -1,0 +1,63 @@
+===================== SYSTEMBAT MANUAL =========================
+The SystemBat Manual is a Knowledge Base to get started using SYSTEMBAT and Learning More about SystemBat
+----------------------------------------------------
+CONTENTS
+1 - Getting Started on SYSTEMBAT
+2 - Perfoming Commands in SYSTEMBAT
+2.1 - Using Command Line
+2.2 - Using Bash Loader
+2.3 - Using SYSTEMBAT SSH Client
+3 - Search the Web Using SYSTEMBAT Browser
+4 - Using File Management Tools
+4.1 - Using RENAMER
+4.2 - Using DELETER
+4.3 - Using DOWNLOADER
+5 - Credits
+---------------------------------------------------
+
+1 - Getting Started on SYSTEMBAT
+To get started. download installer.bat from our Repository, Follow the Steps on the Installer
+to Setup your systembat, Put your Username and Password, once its done Installing, the Installer will Open SYSTEMBAT
+2 - Perfoming Commands in SYSTEMBAT
+SYSTEMBAT Includes 3 Types of Command Lines
+- Command Line
+- Bash Loader
+- SSH Client
+Bash Loader allows you to run Bash Commands on your PC, You need a Linux Distribution from Microsoft Store and Windows Subsystem for Linux
+
+Command Line allows you to run common Windows commands directly on SYSTEMBAT, You dont need anything to set it up as it is Preincluded with your Windows System
+
+SSH Client allows you to run Bash Commands on a Server that Supports SSH, It is Preincluded with Windows 10, You may not use it in Windows 8 or Older Systems
+
+2.1 - Using Command Line
+The Command Line Allows you to run Windows Commands directly on SystemBat
+To leave you can use the systembat-exit command
+2.2 - Using Bash Loader
+The Bash Loader Allows you to Run Bash Commands directly on SYSTEMBAT
+It Requires a Linux Distribution from Microsoft Store and Windows Subsystem for Linux
+You can use the systembat-leave Command to return to the System Menu
+2.3 - Using SYSTEMBAT SSH Client
+You can use the SSH Client to run Bash Commands on a Server, Its Preincluded with Windows 10, You cannot use it in Windows 8 or Older Systems
+To leave you can use the exit command to return to the System Menu 
+3 - Search the Web Using SYSTEMBAT Browser
+SystemBat Includes a Basic Browser, You must have Microsoft Edge Installed in your System (It is included in your System)
+It will first ask for the Site, Type any URL you want to visit
+then it will ask you for incognito, you can type Y to Enable Incognito or N to Disable Incognito
+4 - Using File Management Tools
+SystemBat Includes 3 Tools to Manage your Files
+- DELETER
+- RENAMER
+- DOWNLOADER
+4.1 - Using RENAMER
+You can use Renamer to Rename your Files, Simply put the File
+then put the New Name for your File
+4.2 - Using DELETER
+DELETER can Help you Deleting Files you no longer want, simply type the file location and done
+4.3 - Using DOWNLOADER
+DOWNLOADER Allows you to download Files from the Web directly on SYSTEMBAT, Simply type the File location on it, then wait for the file to download, once downloaded
+enjoy the file!
+5 - Credits
+SYSTEMBAT was made by the BATSYS Team as a Rebuild of BATSYS
+Windows and Microsoft Edge are  Registered Trademarks of Microsoft
+Linux is a Trademark of Linus Torvalds
+We're Not Affilliated with Microsoft or Linus Torvalds
