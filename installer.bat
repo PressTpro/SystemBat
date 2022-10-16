@@ -1,6 +1,8 @@
 @echo off
 cls
 color 1f
+:: Checks
+if exist == systembat.bat del systembat.bat
 title SystemBat Installer
 echo This Application Installs SystemBat in your system
 set /p where-toinstall="Where you want to install SystemBat?"
