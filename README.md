@@ -1,5 +1,5 @@
 # SystemBat
-### SystemBat is now <a href="https://github.com/PepsonRecoded">RW-08</a>
+### SystemBat is now <a href="https://redware-games.itch.io/rw-08">RW-08</a>
 SystemBat is a Small Operating System Built In Batch It Can Run Pre-Included Applications such as SystemBat Browser or SystemBat
 
 # Installation
